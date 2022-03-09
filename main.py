@@ -1,11 +1,10 @@
 def fib(n):
-    if (n < 1):
-        return -1
-    elif n == 1:
-        return 0
-    elif (n >= 2 and n <= 3):
-        return 1
-    else:
-        return fib(n - 1) + fib(n - 2)
+    
+    prev, cur = 0, 1
+    
+    print(prev)
+    for i in range(0, n - 1):
+        prev, cur = cur, prev + cur
+        print(prev)
 
-print(fib(10))
+fib(10)
